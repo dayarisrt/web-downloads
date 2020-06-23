@@ -55,7 +55,6 @@ class CatalogController extends Controller
      */
     public function show(Catalog $catalog)
     { 
-        dd( 'hola');
         return response()->json($catalog,200);
     }
 
