@@ -14,7 +14,8 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        //
+        $catalogs = Catalog::All()->toArray(); 
+        return response()->json($catalogs,200);
     }
 
     /**
@@ -35,7 +36,15 @@ class CatalogController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $catalog = Catalog::where('name','like', '%'.strtolower($request->name).'%');
+        if($catalog->count()){
+            return response()->json(['data' => $catalog->first(), 'state' => true],200);
+        }
+        $catalog = new Catalog;
+        $catalog->fill($request->all());
+        
+        $catalog->save();
+        return response()->json(['data' => $catalog, 'state' => true],200);
     }
 
     /**
@@ -45,8 +54,9 @@ class CatalogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Catalog $catalog)
-    {
-        //
+    { 
+        dd( 'hola');
+        return response()->json($catalog,200);
     }
 
     /**

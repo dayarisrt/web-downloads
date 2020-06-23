@@ -6,3 +6,10 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(69,229,232);
+    background: linear-gradient(90deg, rgba(69,229,232,1) 0%, rgba(10,163,249,1) 56%, rgba(11,242,244,1) 100%);
+}
