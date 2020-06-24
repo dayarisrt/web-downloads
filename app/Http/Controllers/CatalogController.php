@@ -38,7 +38,7 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::where('name','like', '%'.strtolower($request->name).'%');
         if($catalog->count()){
-            return response()->json(['data' => $catalog->first(), 'state' => true],200);
+            return response()->json(['data' => $catalog->first(), 'msj' => 'Catálogo registrado exitosamente!'],200);
         }
         $catalog = new Catalog;
         $catalog->fill($request->all());
@@ -78,7 +78,13 @@ class CatalogController extends Controller
      */
     public function update(Request $request, Catalog $catalog)
     {
-        //
+        $catalog->fill($request->all());
+        
+        if($catalog->save()){
+            return response()->json(['data' => $catalog, 'msj' => 'Catálogo modificado exitosamente!'],200);
+        }else{
+            return response()->json(['data' => $catalog, 'msj' => 'No existe el catálogo indicado'],200);
+        } 
     }
 
     /**
@@ -89,6 +95,18 @@ class CatalogController extends Controller
      */
     public function destroy(Catalog $catalog)
     {
-        //
+        if($catalog->active==true){
+            $catalog->active=false;
+            $status='desactiva';
+        }else{
+            $catalog->active=true;
+            $status='activa';
+        }
+        
+        if($catalog->save()){
+            return response()->json(['data' => $catalog, 'msj' => 'Catálogo '.$status.'do exitosamente!'],200);
+        }else{
+            return response()->json(['data' => $catalog, 'msj' => 'No se pudo '.$status.'r el catálogo indicado'],200);
+        }
     }
 }

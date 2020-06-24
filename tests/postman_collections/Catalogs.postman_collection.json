@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "d5420451-2c14-45f7-8dc4-933ae7fa26b4",
+		"name": "Catalogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/catalogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"catalogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gestiòn de Empleo\",\r\n    \"slug\":\"GE\",\r\n    \"active\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/catalogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"catalogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/catalogs/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"catalogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gestión de Empleo\",\r\n    \"slug\":\"GE\",\r\n    \"active\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/catalogs/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"catalogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate/Inactivate",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/catalogs/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"catalogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
