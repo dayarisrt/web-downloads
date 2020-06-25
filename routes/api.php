@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResources(['catalogs'=> 'CatalogController']);
 Route::apiResources(['sites'=> 'SitesController']);
+Route::apiResources(['sites-customers'=> 'SitesCustomerController']);
 
 /*
 Route::group(['prefix' => 'jobs'], function (){

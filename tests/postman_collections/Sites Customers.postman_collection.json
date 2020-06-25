@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "390d5498-8d1f-43b8-98ec-0d3a03c12dcf",
+		"name": "Sites Customers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/sites-customers",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites-customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gestiòn de Empleo\",\r\n    \"url\":\"blog.periredondo.com.ve\",\r\n    \"banner\":\"aca el banner\",\r\n    \"logo\":\"aca el logo\",\r\n    \"footer\":\"aca el footer\",\r\n    \"email\":\"ejemplo@empresa.com\",\r\n    \"telefono\":\"aca el telefono\",\r\n    \"instagram\":\"aca el instagram\",\r\n    \"facebook\":\"aca el facebook\",\r\n    \"twiter\":\"aca el twiter\",\r\n    \"active\":true,\r\n    \"user_id\":1,\r\n    \"catalog_id\":1,\r\n    \"site_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/sites-customers",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites-customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/sites-customers/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites-customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gestiòn de Empleo\",\r\n    \"url\":\"periredondo.com.ve\",\r\n    \"banner\":\"acá el banner\",\r\n    \"logo\":\"acá el logo\",\r\n    \"footer\":\"acá el footer\",\r\n    \"email\":\"ejemplo@empresa.com\",\r\n    \"telefono\":\"acá el telefono\",\r\n    \"instagram\":\"acá el instagram\",\r\n    \"facebook\":\"acá el facebook\",\r\n    \"twiter\":\"acá el twiter\",\r\n    \"active\":true,\r\n    \"user_id\":1,\r\n    \"catalog_id\":1,\r\n    \"site_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/sites-customers/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites-customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate/Inactivate",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/sites-customers/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sites-customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
