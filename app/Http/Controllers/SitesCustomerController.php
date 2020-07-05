@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\SitesCustomer;
+use App\Catalog;
+use App\Sites;
 use Illuminate\Http\Request;
 
 class SitesCustomerController extends Controller
@@ -25,7 +27,9 @@ class SitesCustomerController extends Controller
      */
     public function create()
     {
-        return view('site_customer.create');
+        $catalogs = Catalog::get();
+        $sites = Sites::get();
+        return view('site_customer.create')->with('catalogs',$catalogs)->with('sites',$sites);
     }
 
     /**

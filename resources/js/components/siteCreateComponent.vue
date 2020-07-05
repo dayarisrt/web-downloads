@@ -32,7 +32,7 @@
             <div class="form-row">
                 <label for="active">active:</label>
                 <input type="text" id="active" class="form-control" v-model="form.active" placeholder="Active">
-            </div>
+            </div><br>
             <button type="submit" class="btn btn-success">Resgistrar sitio</button>
         </form>
     </div>

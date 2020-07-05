@@ -1928,37 +1928,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       form: new Form({
         name: '',
-        url: '',
-        banner: '',
-        logo: '',
-        footer: '',
-        email: '',
-        phone: '',
+        slug: '',
         active: ''
       })
     };
@@ -2084,7 +2059,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['catalogs', 'sites'],
   data: function data() {
     return {
       form: new Form({
@@ -37677,175 +37677,33 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "url" } }, [_vm._v("URL:")]),
+        _c("label", { attrs: { for: "slug" } }, [_vm._v("Slug:")]),
         _vm._v(" "),
         _c("input", {
           directives: [
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.form.url,
-              expression: "form.url"
+              value: _vm.form.slug,
+              expression: "form.slug"
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", id: "url", placeholder: "Ingrese la URL" },
-          domProps: { value: _vm.form.url },
+          attrs: { type: "text", id: "slug", placeholder: "Ingrese el slug" },
+          domProps: { value: _vm.form.slug },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.$set(_vm.form, "url", $event.target.value)
+              _vm.$set(_vm.form, "slug", $event.target.value)
             }
           }
         })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "banner" } }, [_vm._v("Banner:")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.banner,
-              expression: "form.banner"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "banner",
-            placeholder: "Ingrese el banner"
-          },
-          domProps: { value: _vm.form.banner },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "banner", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "logo" } }, [_vm._v("logo:")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.logo,
-              expression: "form.logo"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "logo", placeholder: "Ingrese el logo" },
-          domProps: { value: _vm.form.logo },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "logo", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "footer" } }, [_vm._v("footer:")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.footer,
-              expression: "form.footer"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "footer",
-            placeholder: "Ingrese el footer"
-          },
-          domProps: { value: _vm.form.footer },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "footer", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "email" } }, [_vm._v("email:")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.email,
-              expression: "form.email"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "email", placeholder: "Ingrese el email" },
-          domProps: { value: _vm.form.email },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "email", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "phone" } }, [_vm._v("telefono:")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.phone,
-              expression: "form.phone"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "prone",
-            placeholder: "Ingrese el teléfono"
-          },
-          domProps: { value: _vm.form.phone },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "phone", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-row" }, [
-        _c("label", { attrs: { for: "active" } }, [_vm._v("active:")]),
+        _c("label", { attrs: { for: "active" } }, [_vm._v("Activo:")]),
         _vm._v(" "),
         _c("input", {
           directives: [
@@ -37857,7 +37715,11 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", id: "active", placeholder: "Active" },
+          attrs: {
+            type: "text",
+            id: "active",
+            placeholder: "Indique si esta activo"
+          },
           domProps: { value: _vm.form.active },
           on: {
             input: function($event) {
@@ -37869,11 +37731,12 @@ var render = function() {
           }
         })
       ]),
+      _c("br"),
       _vm._v(" "),
       _c(
         "button",
         { staticClass: "btn btn-success", attrs: { type: "submit" } },
-        [_vm._v("Resgistrar sitio")]
+        [_vm._v("Crear catálogo")]
       )
     ])
   ])
@@ -38121,6 +37984,7 @@ var render = function() {
           }
         })
       ]),
+      _c("br"),
       _vm._v(" "),
       _c(
         "button",
@@ -38154,6 +38018,40 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("form", { attrs: { action: "" } }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "catalog" } }, [
+          _vm._v("Seleccione un catálogo:")
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          { staticClass: "form-control", attrs: { id: "catalog" } },
+          _vm._l(this.catalogs, function(catalog) {
+            return _c("option", { domProps: { value: catalog.id } }, [
+              _vm._v(_vm._s(catalog.name))
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "site" } }, [
+          _vm._v("Seleccione un sitio:")
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          { staticClass: "form-control", attrs: { id: "site" } },
+          _vm._l(this.sites, function(site) {
+            return _c("option", { domProps: { value: site.id } }, [
+              _vm._v(_vm._s(site.name))
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "form-row" }, [
         _c("label", { attrs: { for: "name" } }, [
           _vm._v("Nombre de tu sitio:")
@@ -38335,7 +38233,7 @@ var render = function() {
           staticClass: "form-control",
           attrs: {
             type: "text",
-            id: "prone",
+            id: "phone",
             placeholder: "Ingrese el teléfono"
           },
           domProps: { value: _vm.form.phone },
@@ -38345,6 +38243,96 @@ var render = function() {
                 return
               }
               _vm.$set(_vm.form, "phone", $event.target.value)
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-row" }, [
+        _c("label", { attrs: { for: "instagram" } }, [_vm._v("instagram:")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.form.instagram,
+              expression: "form.instagram"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: {
+            type: "text",
+            id: "instagram",
+            placeholder: "Ingrese el instagram"
+          },
+          domProps: { value: _vm.form.instagram },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.form, "instagram", $event.target.value)
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-row" }, [
+        _c("label", { attrs: { for: "facebook" } }, [_vm._v("facebook:")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.form.facebook,
+              expression: "form.facebook"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: {
+            type: "text",
+            id: "facebook",
+            placeholder: "Ingrese el facebook"
+          },
+          domProps: { value: _vm.form.facebook },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.form, "facebook", $event.target.value)
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-row" }, [
+        _c("label", { attrs: { for: "twiter" } }, [_vm._v("twiter:")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.form.twiter,
+              expression: "form.twiter"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: {
+            type: "text",
+            id: "twiter",
+            placeholder: "Ingrese el twiter"
+          },
+          domProps: { value: _vm.form.twiter },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.form, "twiter", $event.target.value)
             }
           }
         })
@@ -38375,6 +38363,7 @@ var render = function() {
           }
         })
       ]),
+      _c("br"),
       _vm._v(" "),
       _c(
         "button",
@@ -51022,14 +51011,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************************!*\
   !*** ./resources/js/components/SiteCustomerCreateComponent.vue ***!
   \*****************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SiteCustomerCreateComponent_vue_vue_type_template_id_e1cab97e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SiteCustomerCreateComponent.vue?vue&type=template&id=e1cab97e& */ "./resources/js/components/SiteCustomerCreateComponent.vue?vue&type=template&id=e1cab97e&");
 /* harmony import */ var _SiteCustomerCreateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SiteCustomerCreateComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/SiteCustomerCreateComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _SiteCustomerCreateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _SiteCustomerCreateComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -51059,7 +51049,7 @@ component.options.__file = "resources/js/components/SiteCustomerCreateComponent.
 /*!******************************************************************************************!*\
   !*** ./resources/js/components/SiteCustomerCreateComponent.vue?vue&type=script&lang=js& ***!
   \******************************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

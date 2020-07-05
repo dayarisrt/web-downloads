@@ -6,6 +6,6 @@
                 <h1 class="text-center">Crea tu sitio</h1>
             </div>
         </div>
-        <site-customer-create-component></site-customer-create-component>
+        <site-customer-create-component :catalogs='{{$catalogs}}' :sites='{{$sites}}'></site-customer-create-component>
     </div>
 @endsection
