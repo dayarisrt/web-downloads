@@ -25,7 +25,7 @@ class SitesController extends Controller
      */
     public function create()
     {
-        //
+        return view('site.create');
     }
 
     /**

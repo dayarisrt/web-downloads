@@ -25,7 +25,7 @@ class CatalogController extends Controller
      */
     public function create()
     {
-        //
+        return view('catalog.create');
     }
 
     /**

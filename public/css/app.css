@@ -10928,10 +10928,3 @@ a.text-dark:focus {
   }
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  background: #45e5e8;
-  background: linear-gradient(90deg, #45e5e8 0%, #0aa3f9 56%, #0bf2f4 100%);
-}
-

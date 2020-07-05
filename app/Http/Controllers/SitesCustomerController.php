@@ -25,7 +25,7 @@ class SitesCustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('site_customer.create');
     }
 
     /**
